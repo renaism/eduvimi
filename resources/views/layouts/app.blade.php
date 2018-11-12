@@ -13,8 +13,11 @@
         #sidebar {
             padding-top: 60px;
         }
-        #tab {
-            padding-top: 80px;
+        #tab, #content {
+            margin-top: 80px;
+        }
+        #subContent {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -26,10 +29,7 @@
                 @include('inc.sidebar')
             </div>
             <div class="col-10">
-                @include('inc.tab')
-                <div class="container" id="content">
-                    @yield('content')
-                </div>
+                @yield('page')
             </div>
         </div>
     </div>

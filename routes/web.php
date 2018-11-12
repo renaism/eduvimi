@@ -12,25 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('normalisasi.index');
+    return view('index')->with('page', ['sub' => 'index']);
 });
 
 Route::get('/normalisasi', function () {
-    return view('normalisasi.index');
+    return view('normalisasi.normalisasi')->with('page', ['sub' => 'normalisasi']);
 });
 
-Route::get('/normalisasi/1nf', function () {
-    return view('normalisasi.1nf.index');
-});
-
-Route::get('/normalisasi/2nf', function () {
-    return view('normalisasi.2nf.index');
-});
-
-Route::get('/normalisasi/3nf', function () {
-    return view('normalisasi.3nf.index');
-});
-
-Route::get('/normalisasi/bcnf', function () {
-    return view('normalisasi.bcnf.index');
-});
+Route::get('/normalisasi/{sub}/{tab?}', function ($sub, $tab='materi') {
+    return view('normalisasi.' . $sub . '.' . $tab)->with('page', ['sub' => $sub, 'tab' => $tab]);
+})->where(['sub' => '1nf|2nf|3nf|bcnf', 'tab' => 'materi|soal|diskusi']);
