@@ -22,3 +22,6 @@ Route::get('/normalisasi', function () {
 Route::get('/normalisasi/{sub}/{tab?}', function ($sub, $tab='materi') {
     return view('normalisasi.' . $sub . '.' . $tab)->with('page', ['sub' => $sub, 'tab' => $tab]);
 })->where(['sub' => '1nf|2nf|3nf|bcnf', 'tab' => 'materi|soal|diskusi']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
