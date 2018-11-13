@@ -1,5 +1,5 @@
-@extends('layouts.sub')
+@extends('layouts.soal')
 
 @section('content')
-    <h1>1st Normal Form | Soal</h1>
+    
 @endsection

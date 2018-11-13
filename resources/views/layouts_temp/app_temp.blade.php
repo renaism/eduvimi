@@ -29,7 +29,11 @@
                 @include('inc.sidebar')
             </div>
             <div class="col-10">
-                @yield('page')
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        @yield('page')
+                    </div>
+                </div>
             </div>
         </div>
     </div>
