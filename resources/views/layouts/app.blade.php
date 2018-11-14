@@ -18,11 +18,8 @@
         #sidebar {
             padding-top: 60px;
         }
-        #tab, #content {
+        #content {
             margin-top: 80px;
-        }
-        #subContent {
-            margin-top: 20px;
         }
     </style>
 </head>
@@ -40,7 +37,9 @@
             <div class="col-10">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        @yield('page')
+                        <div class="container" id="content">
+                            @yield('content')
+                        </div>
                     </div>
                 </div>
             </div>

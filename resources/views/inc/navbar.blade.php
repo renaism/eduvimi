@@ -5,10 +5,11 @@
         <button type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-sm-2">Cari</button>
     </form>
     @guest
-        <div class="dropdown">
+        <div class="dropdown @if (count($errors) > 0) show @endif">
             <a href="#" role="button" data-toggle="dropdown" class="btn btn-primary mr-sm-2">Masuk</a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <form class="p-4">
+            <div class="dropdown-menu dropdown-menu-right @if (count($errors) > 0) show @endif">
+                <form method="POST" action="{{ route('login') }}" class="p-4">
+                    @csrf
                     <div class="form-group mb-3">
                         <label>Email</label>
                         <input type="email" name="email" value="{{ old('email') }}" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autofocus>
@@ -46,9 +47,16 @@
                 <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height="25" width="25"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="#" class="dropdown-item">Profil</a>
+                <a href="#" class="dropdown-item">{{ Auth::user()->name }}</a>
                 <a href="#" class="dropdown-item">Pengaturan</a>
-                <a href="#" class="dropdown-item">Keluar</a>
+                <a href="{{ route('logout') }}" class="dropdown-item"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    Keluar
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </div>
     @endguest

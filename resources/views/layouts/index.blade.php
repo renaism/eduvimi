@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('page')
-    <div class="container" id="content">
-        @yield('content')
-    </div>
+@section('content')
+
 @endsection

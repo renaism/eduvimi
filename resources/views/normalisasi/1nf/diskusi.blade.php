@@ -1,13 +1,14 @@
 @extends('layouts.diskusi')
 
 @section('discussions')
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-2">
-                    <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height="80" width="80"/>
-                </div>
-                <div class="col-10">
+    
+    <div class="row">
+        <div class="col-2">
+            <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height=auto width="100%"/>
+        </div>
+        <div class="col-10">
+            <div class="card">
+                <div class="card-body">
                     <h4>Bayu Arifatul</h4>
                     <p>
                         GUA GANTENG
