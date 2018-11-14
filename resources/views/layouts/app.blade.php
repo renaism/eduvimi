@@ -31,7 +31,11 @@
     <div class="container-fluid d-flex flex-column h-100">
         <div class="row flex-grow-1">
             <div class="col-2 p-0">
-                @include('inc.sidebar')
+                @isset($records)
+                    @include('inc.sidebar')
+                @else
+                    @include('inc.sidebar', ['page' => ['sub' => 'auth']]) 
+                @endisset
             </div>
             <div class="col-10">
                 <div class="row">
