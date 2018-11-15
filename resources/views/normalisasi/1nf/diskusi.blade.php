@@ -1,45 +1,56 @@
 @extends('layouts.diskusi')
 
 @section('discussions')
-    
-    <div class="row">
-        <div class="col-2">
-            <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height=auto width="100%"/>
+    <div class="comment mt-3">
+        <div class="comment-main d-flex flex-row">
+            <div class="comment-avatar rounded-circle" style="background-image: url({{ asset('bayu_sun.jpg') }}"></div>
+            <div class="comment-content flex-grow-1 ml-3">
+                <div class="comment-header">
+                    <a href="#"><h5>Bayu Arifat</h5></a>
+                </div>
+                <div class="comment-text">
+                    Yah jembut...
+                </div>
+                <div class="comment-footer d-flex mt-2">
+                    <div><small>24 Februari 2018</small></div>
+                    @auth
+                        <div class="ml-3">
+                            <a href="#" data-toggle="collapse" data-target="#comment-reply-1">Balas</a>
+                        </div>
+                    @endauth
+                </div>
+                @auth
+                    <div class="collapse" id="comment-reply-1">
+                        <form action="#" class="mt-3">
+                            <div class="form-group">
+                                <textarea name="postText" rows="1" class="form-control" placeholder="Tambahkan komentar..."></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary float-right">Post</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>   
+                @endauth
+            </div>
         </div>
-        <div class="col-10">
-            <div class="card">
-                <div class="card-body">
-                    <h4>Bayu Arifatul</h4>
-                    <p>
-                        GUA GANTENG
-                    </p>
+        <div class="comment-replies ml-5 mt-3">
+            <div class="comment-main d-flex flex-row">
+                <div class="comment-avatar rounded-circle" style="background-image: url({{ asset('bayu_sun.jpg') }}"></div>
+                <div class="comment-content flex-grow-1 ml-3">
+                    <div class="comment-header">
+                        <a href="#"><h5>Bayu Arifat</h5></a>
+                    </div>
+                    <div class="comment-text">
+                        Yah jembut...
+                    </div>
+                    <div class="comment-footer d-flex mt-2">
+                        <div><small>24 Februari 2018</small></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card ml-5 mt-3">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-2">
-                    <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height="60" width="60"/>
-                </div>
-                <div class="col-10">
-                    <h5>Bayu Arifatul</h5>
-                    <p>
-                        BENER BANGET
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <form action="#" class="ml-5 mt-3">
-        <div class="form-group">
-            <textarea name="postText" rows="1" class="form-control" placeholder="Tambahkan komentar..."></textarea>
-        </div>
-        <div class="form-row">
-            <div class="col">
-                <button type="submit" class="btn btn-primary float-right">Post</button>
-            </div>
-        </div>
-    </form>
+    <hr />
 @endsection

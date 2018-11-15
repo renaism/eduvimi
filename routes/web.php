@@ -19,10 +19,14 @@ Route::get('/normalisasi', function () {
     return view('normalisasi.normalisasi')->with('page', ['sub' => 'normalisasi']);
 });
 
-Route::get('/normalisasi/{sub}/{tab?}', function ($sub, $tab='materi') {
-    return view('normalisasi.' . $sub . '.' . $tab)->with('page', ['sub' => $sub, 'tab' => $tab]);
-})->where(['sub' => '1nf|2nf|3nf|bcnf', 'tab' => 'materi|soal|diskusi']);
+Route::get('/normalisasi/{sub}', 'PageController@materi')->where(['sub' => '1nf|2nf|3nf|bcnf']);
+
+// Route::get('/normalisasi/{sub}/{tab?}', function ($sub, $tab='materi') {
+//     return view('normalisasi.' . $sub . '.' . $tab)->with('page', ['sub' => $sub, 'tab' => $tab]);
+// })->where(['sub' => '1nf|2nf|3nf|bcnf', 'tab' => 'materi|soal|diskusi']);
 
 Auth::routes();
+
+Route::post('submit_post', 'PostController@storePost');
 
 Route::get('/home', 'HomeController@index')->name('home');
