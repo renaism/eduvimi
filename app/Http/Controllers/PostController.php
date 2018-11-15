@@ -62,6 +62,8 @@ class PostController extends Controller
         $reply->user_id = Auth::id();
 
         $reply->save();
+
+        return back()->with('success', 'Reply Created');
     }
 
     /**
@@ -107,7 +109,7 @@ class PostController extends Controller
     public function destroyPost(Post $post)
     {
         // Get the post
-        $post = Post::find($id);
+        $post = Post::find($post->id);
 
         // Get all replies to the post
         $replies = Reply::where('post_id', $post->id)->get();
@@ -119,11 +121,15 @@ class PostController extends Controller
 
         // Delete the post
         $post->delete();
+
+        return back()->with('success', 'Post Deleted');
     }
 
     public function destroyReply(Reply $reply)
     {
-        $reply = Reply::find($id);
+        $reply = Reply::find($reply->id);
         $reply->delete();
+
+        return back()->with('success', 'Reply Deleted');
     }
 }

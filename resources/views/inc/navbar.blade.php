@@ -42,8 +42,8 @@
             </div>
         </div>
     @else
-        <div class="dropdown">
-            <a href="#" role="button" data-toggle="dropdown" class="btn dropdown-toggle">
+        <div class="dropdown btn-group">
+            <a href="#" role="button" data-toggle="dropdown" id="loginDropdownToggle" class="btn dropdown-toggle">
                 <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height="25" width="25"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right">

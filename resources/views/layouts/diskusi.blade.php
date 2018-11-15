@@ -2,14 +2,14 @@
 
 @section('content')
     <style type="text/css">
-        .comment-avatar {
+        .post-avatar {
             width: 75px;
             height: 75px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain; 
         }
-        .comment-replies .comment-avatar {
+        .post-replies .post-avatar {
             width: 50px;
             height: 50px;
         }
@@ -33,10 +33,27 @@
         </div>
     @else
         <div class="alert alert-primary" role="alert">
-            Silahkan masuk untuk ikut serta dalam diskusi
+            Silahkan <a href="#" class="alert-link login-toggle">masuk</a> untuk ikut serta dalam diskusi
         </div>
     @endauth
     <div class="mt-3">
+        @if(count($page['postAndReplies']) > 0)
+            @foreach ($page['postAndReplies'] as $post)
+                <hr />
+                @include('inc.post', ['post' => $post])
+            @endforeach
+            <hr />
+        @else
+            <h1 class="text-center text-black-50 mt-5">Belum ada diskusi</h1>
+        @endif
         @yield('discussions')
     </div>
+@endsection
+@section('script')
+    <script>
+        $('.login-toggle').click(function(e){
+            e.stopPropagation();
+            $('#loginDropdownToggle').dropdown('toggle');
+        });
+    </script>
 @endsection
