@@ -25,7 +25,7 @@ class PageController extends Controller
         $postsAndReplies = collect([]);
         foreach($posts as $post) {
             $post->user_name = User::find($post->user_id)->name;
-            $replies = Reply::where('post_id', $post->id)->orderBy('created_at', 'desc')->get();
+            $replies = Reply::where('post_id', $post->id)->orderBy('created_at', 'asc')->get();
             foreach($replies as $reply) {
                 $reply->user_name = User::find($reply->user_id)->name;
             }
