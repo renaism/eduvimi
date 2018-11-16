@@ -2,7 +2,9 @@
     <a href="/" class="navbar-brand mr-auto">Eduvimi</a>
     <form class="form-inline">
         <input type="search" placeholder="Cari" class="form-control mr-sm-2">
-        <button type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-sm-2">Cari</button>
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-sm-2">
+            <span class="oi oi-magnifying-glass"></span>
+        </button>
     </form>
     @guest
         <div class="dropdown @if (count($errors) > 0) show @endif">
