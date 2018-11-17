@@ -14,11 +14,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/content.css') }}" rel="stylesheet">
     <style>
-        html, body{
+        html, body {
             height: 100%;
         }
+        #navbar {
+            min-height: 4rem;
+        }
         #sidebar {
-            padding-top: 60px;
+            position: sticky;
+            top: 4rem;
+            z-index: 99;
+            height: calc(100vh - 4rem);
         }
         #content {
             margin-top: 80px;
@@ -36,7 +42,7 @@
     @include('inc.navbar')
     <div class="container-fluid d-flex flex-column h-100">
         <div class="row flex-grow-1">
-            <div class="col-2 p-0">
+            <div class="col-2 p-0" id="sidebar">
                 @isset($page)
                     @include('inc.sidebar')
                 @else
@@ -45,6 +51,7 @@
             </div>
             <div class="col-10 p-0 pb-5">
                 @isset($page)
+                <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
                             <div class="container" id="content">
@@ -52,6 +59,7 @@
                             </div>
                         </div>
                     </div>
+                </div>          
                 @else
                     @yield('content')
                 @endisset

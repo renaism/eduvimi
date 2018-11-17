@@ -39,4 +39,12 @@ class PageController extends Controller
         ];
         return view('layouts.diskusi')->with('page', $page);
     }
+
+    public function search(Request $request) {
+        $page = [
+            'sub' => 'search',
+            'search' => $request->input('search')
+        ];
+        return view('layouts.search')->with('page', $page);
+    }
 }

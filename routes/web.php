@@ -35,4 +35,6 @@ Route::post('reply', 'PostController@storeReply');
 Route::delete('post/{post}', 'PostController@destroyPost');
 Route::delete('reply/{reply}', 'PostController@destroyReply');
 
+Route::get('search', 'PageController@search');
+
 Route::get('/home', 'HomeController@index')->name('home');

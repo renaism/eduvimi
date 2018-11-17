@@ -1,8 +1,9 @@
-<nav class="navbar fixed-top navbar-light bg-white shadow-sm">
+<nav class="navbar fixed-top navbar-light bg-white shadow-sm" id="navbar">
     <a href="/" class="navbar-brand mr-auto">Eduvimi</a>
-    <form class="form-inline">
+    <form action="{{ action('PageController@search') }}" method="GET" class="form-inline">
+        @csrf
         <div class="input-group my-2 my-sm-0 mr-sm-2">
-            <input type="search" placeholder="Cari" class="form-control">
+            <input type="search" name="search" placeholder="Cari" class="form-control" @isset($page['search']) value="{{ $page['search'] }}" @endisset>
             <div class="input-group-append">
                 <button type="submit" class="btn btn-outline-success">
                     <span class="oi oi-magnifying-glass"></span>
