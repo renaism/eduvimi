@@ -10,17 +10,17 @@ use Illuminate\Support\Collection;
 
 class PageController extends Controller
 {
-    public function materi($section) {
+    public function materi($section='main') {
         $page = ['sub' => $section, 'tab' => 'materi'];
         return view('normalisasi.' . $section . '.materi')->with('page', $page);
     }
 
-    public function soal($section) {
+    public function soal($section='main') {
         $page = ['sub' => $section, 'tab' => 'soal'];
         return view('normalisasi.' . $section . '.soal')->with('page', $page);
     }
 
-    public function diskusi($section) {
+    public function diskusi($section='main') {
         $posts = Post::where('section', $section)->orderBy('created_at', 'desc')->get();
         $postsAndReplies = collect([]);
         foreach($posts as $post) {

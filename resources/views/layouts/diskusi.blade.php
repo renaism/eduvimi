@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <style type="text/css">
+    <style>
         .post-avatar {
             width: 75px;
             height: 75px;

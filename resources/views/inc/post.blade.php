@@ -1,6 +1,6 @@
 <div class="post mt-3">
     <div class="post-main d-flex flex-row">
-        <div class="post-avatar rounded-circle" style="background-image: url({{ asset('bayu_sun.jpg') }}"></div>
+        <div class="post-avatar rounded-circle" style="background-image: url('{{ asset('user.svg') }}')"></div>
         <div class="post-content flex-grow-1 ml-3">
             <div class="post-header">
                 <a href="#"><h5>{{ $post['post']->user_name }}</h5></a>
@@ -62,7 +62,7 @@
     <div class="post-replies ml-5 mt-3">
         @foreach($post['replies'] as $reply)
             <div class="post-main d-flex flex-row">
-                <div class="post-avatar rounded-circle" style="background-image: url({{ asset('bayu_sun.jpg') }}"></div>
+                <div class="post-avatar rounded-circle" style="background-image: url('{{ asset('user.svg') }}')"></div>
                 <div class="post-content flex-grow-1 ml-3">
                     <div class="post-header">
                         <a href="#"><h5>{{ $reply->user_name }}</h5></a>

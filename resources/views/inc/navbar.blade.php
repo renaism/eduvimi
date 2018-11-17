@@ -1,10 +1,14 @@
 <nav class="navbar fixed-top navbar-light bg-white shadow-sm">
     <a href="/" class="navbar-brand mr-auto">Eduvimi</a>
     <form class="form-inline">
-        <input type="search" placeholder="Cari" class="form-control mr-sm-2">
-        <button type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-sm-2">
-            <span class="oi oi-magnifying-glass"></span>
-        </button>
+        <div class="input-group my-2 my-sm-0 mr-sm-2">
+            <input type="search" placeholder="Cari" class="form-control">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-success">
+                    <span class="oi oi-magnifying-glass"></span>
+                </button>
+            </div>
+        </div>
     </form>
     @guest
         <div class="dropdown @if (count($errors) > 0) show @endif">
@@ -46,7 +50,7 @@
     @else
         <div class="dropdown btn-group">
             <a href="#" role="button" data-toggle="dropdown" id="loginDropdownToggle" class="btn dropdown-toggle">
-                <img src="{{ asset('bayu_sun.jpg') }}" class="rounded-circle" height="25" width="25"/>
+                <img src="{{ asset('user.svg') }}" class="rounded-circle" height="25" width="25"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="#" class="dropdown-item">{{ Auth::user()->name }}</a>
