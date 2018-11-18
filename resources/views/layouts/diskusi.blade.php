@@ -16,7 +16,7 @@
     </style>
     @include('inc.tab')
     @auth
-        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#newPost">Post Baru</button>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#newPost"><span class="oi oi-plus">&nbsp;</span> Post Baru</button>
         <div class="collapse" id="newPost">
             <form action="{{ action('PostController@storePost') }}" method="post" class="pt-3">
                 @csrf
