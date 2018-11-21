@@ -39,17 +39,21 @@
     </style>
 </head>
 <body>
-    @include('inc.navbar')
+    @isset($page)
+        @include('inc.navbar')
+    @else
+        @include('inc.navbar', ['page' => ['sub' => 'other']])
+    @endisset
     <div class="container-fluid d-flex flex-column h-100">
         <div class="row flex-grow-1">
-            <div class="col-2 p-0" id="sidebar">
+            <div class="col-md-2 d-none d-md-block p-0" id="sidebar">
                 @isset($page)
                     @include('inc.sidebar')
                 @else
                     @include('inc.sidebar', ['page' => ['sub' => 'other']])
                 @endisset
             </div>
-            <div class="col-10 p-0 pb-5">
+            <div class="col-md-10 col-sm-12 p-0 pb-5">
                 @isset($page)
                 <div class="container">
                     <div class="row">
