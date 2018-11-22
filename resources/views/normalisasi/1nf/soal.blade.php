@@ -139,7 +139,7 @@
                 <p>
                     Diketahui tabel data yang belum ternomalisasi:
                 </p>
-                <div class="table-responsive"><table class="table table-bordered">
+                <div class="table-responsive-xl"><table class="table table-bordered">
                     <thead class="thead-dark">
                         <tr>
                             <th>Id Buku</th>
