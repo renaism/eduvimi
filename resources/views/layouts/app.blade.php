@@ -65,7 +65,9 @@
                     </div>
                 </div>          
                 @else
-                    @yield('content')
+                    <div class="container" id="content">
+                        @yield('content')
+                    </div>
                 @endisset
             </div>
         </div>

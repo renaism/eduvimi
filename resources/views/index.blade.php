@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('content')
-    <div class="container-fluid text-center" id="content">
+    <div class="container-fluid text-center">
         <h1 class="display-1">Eduvimi</h1>
         <p class="lead">Belajar normalisasi gak pake ribet.</p>
         
