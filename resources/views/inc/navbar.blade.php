@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <form action="{{ action('PageController@search') }}" method="GET" class="form-inline ml-auto">
             @csrf
-            <div class="input-group my-2 my-md-0 mr-md-2">
+            <div class="input-group my-2 my-lg-0 mr-lg-2">
                 <input type="search" name="search" placeholder="Cari" class="form-control" @isset($page['search']) value="{{ $page['search'] }}" @endisset>
                 <div class="input-group-append">
                     <button type="submit" class="btn btn-outline-success">
