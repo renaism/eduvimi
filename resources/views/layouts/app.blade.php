@@ -29,12 +29,22 @@
         #content {
             margin-top: 80px;
         }
+        
         #topBtn {
             display: none; /* Hidden by default */
             position: fixed; /* Fixed/sticky position */
             bottom: 20px; /* Place the button at the bottom of the page */
             right: 30px; /* Place the button 30px from the right */
             z-index: 99; /* Make sure it does not overlap */
+        }
+
+        .material-text {
+            text-align: justify;
+        }
+        @media (min-width: 576px) {
+            .material-text {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
@@ -46,29 +56,17 @@
     @endisset
     <div class="container-fluid d-flex flex-column h-100">
         <div class="row flex-grow-1">
-            <div class="col-md-2 d-none d-md-block p-0" id="sidebar">
+            <div class="col-lg-2 d-none d-lg-block p-0" id="sidebar">
                 @isset($page)
                     @include('inc.sidebar')
                 @else
                     @include('inc.sidebar', ['page' => ['sub' => 'other']])
                 @endisset
             </div>
-            <div class="col-md-10 col-sm-12 p-0 pb-5">
-                @isset($page)
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 offset-md-2">
-                            <div class="container" id="content">
-                                @yield('content')
-                            </div>
-                        </div>
-                    </div>
-                </div>          
-                @else
-                    <div class="container" id="content">
-                        @yield('content')
-                    </div>
-                @endisset
+            <div class="col-12 col-lg-10 p-0 pb-5">
+                <div class="container" id="content">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>

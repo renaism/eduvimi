@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top" id="navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-element">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="/" class="navbar-brand">Eduvimi</a>
-    <div class="collapse navbar-collapse navbar-collapse-element">
+    <a href="/" class="navbar-brand mx-auto">Eduvimi</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <form action="{{ action('PageController@search') }}" method="GET" class="form-inline ml-auto">
             @csrf
-            <div class="input-group my-2 mr-md-2">
+            <div class="input-group my-2 my-md-0 mr-md-2">
                 <input type="search" name="search" placeholder="Cari" class="form-control" @isset($page['search']) value="{{ $page['search'] }}" @endisset>
                 <div class="input-group-append">
                     <button type="submit" class="btn btn-outline-success">
@@ -15,13 +15,19 @@
                 </div>
             </div>
         </form>
+        <nav class="list-group list-group-flush w-100 px-0 d-md-none">
+            <a href="/normalisasi" class="list-group-item list-group-item-action @if($page['sub']=='main') bg-light @else bg-white @endif">Normalisasi</a>
+            <a href="/normalisasi/1nf" class="list-group-item list-group-item-action @if($page['sub']=='1nf') bg-light @else bg-white @endif">1NF</a>
+            <a href="/normalisasi/2nf" class="list-group-item list-group-item-action @if($page['sub']=='2nf') bg-light @else bg-white @endif">2NF</a>
+            <a href="/normalisasi/3nf" class="list-group-item list-group-item-action @if($page['sub']=='3nf') bg-light @else bg-white @endif">3NF</a>
+            <a href="/normalisasi/bcnf" class="list-group-item list-group-item-action @if($page['sub']=='bcnf') bg-light @else bg-white @endif">BCNF</a>
+        </nav>
     </div>
-    <div class="collapse navbar-collapse-element">
-        
-    </div>
+    <!-- User -->
+    <div class="d-none d-md-flex">
     @guest
         <div class="dropdown @if (count($errors) > 0) show @endif">
-            <a href="#" role="button" data-toggle="dropdown" class="btn btn-primary mr-sm-2">Masuk</a>
+            <a href="#" role="button" data-toggle="dropdown" class="btn btn-primary mr-2">Masuk</a>
             <div class="dropdown-menu dropdown-menu-right @if (count($errors) > 0) show @endif">
                 <form method="POST" action="{{ route('login') }}" class="p-4">
                     @csrf
@@ -75,4 +81,6 @@
             </div>
         </div>
     @endguest
+    <!-- End User -->
+    </div>
 </nav>
