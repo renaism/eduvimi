@@ -15,7 +15,7 @@
                 <p>
                     Diketahui tabel data yang belum ternomalisasi:
                 </p>
-                <table class="table table-bordered">
+                <div class="table-responsive"><table class="table table-bordered">
                     <thead class="thead-dark">
                         <tr>
                             <th>NIP</th>
@@ -60,13 +60,13 @@
                             <td>2 Tahun</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
                 <p>
                     Ubahlah tabel data tersebut agar memenuhi 1NF!
                 </p>
                 <button type="button" data-toggle="collapse" data-target="#jawaban1" class="btn btn-primary">Lihat Jawaban</button>
                 <div class="collapse" id="jawaban1">
-                    <table class="table table-bordered mt-4">
+                    <div class="table-responsive"><table class="table table-bordered mt-4">
                         <thead class="thead-dark">
                             <tr>
                                 <th>NIP</th>
@@ -120,7 +120,7 @@
                                 <td>2 Tahun</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table></div>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
                 <p>
                     Diketahui tabel data yang belum ternomalisasi:
                 </p>
-                <div class="table-responsive-xl"><table class="table table-bordered">
+                <div class="table-responsive"><table class="table table-bordered">
                     <thead class="thead-dark">
                         <tr>
                             <th>Id Buku</th>
@@ -194,7 +194,7 @@
                 </p>
                 <button type="button" data-toggle="collapse" data-target="#jawaban2" class="btn btn-primary">Lihat Jawaban</button>
                 <div class="collapse" id="jawaban2">
-                    <table class="table table-bordered mt-4">
+                    <div class="table-responsive"><table class="table table-bordered mt-4">
                         <caption>Data Buku</caption>
                         <thead class="thead-dark">
                             <tr>
@@ -220,8 +220,8 @@
                                 <td>07-01-2012</td>
                             </tr>
                         </tbody>
-                    </table>
-                    <table class="table table-bordered mt-4">
+                    </table></div>
+                    <div class="table-responsive"><table class="table table-bordered mt-4">
                         <caption>Data Penerbit</caption>
                         <thead class="thead-dark">
                             <tr>
@@ -242,8 +242,8 @@
                                 <td>Jl.Merdeka</td>
                             </tr>
                         </tbody>
-                    </table>
-                    <table class="table table-bordered mt-4">
+                    </table></div>
+                    <div class="table-responsive"><table class="table table-bordered mt-4">
                         <caption>Data Peminjam</caption>
                         <thead class="thead-dark">
                             <tr>
@@ -264,7 +264,7 @@
                                 <td>Jl.Sukapura</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table></div>
                 </div>
             </div>
         </div>

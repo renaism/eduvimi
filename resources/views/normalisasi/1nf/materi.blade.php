@@ -16,7 +16,7 @@
         Contoh normalisasi 1NF dari <a href="/normalisasi#tabel"> tabel sebelumnya</a>:
     </p>
     <a name="tabel"></a>
-    <table class="table table-striped">
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data mobil</caption>
         <thead class="thead-dark">
             <tr>
@@ -47,8 +47,8 @@
                 <td>2016</td>
             </tr>
         </tbody>
-    </table>
-    <table class="table table-striped">
+    </table></div>
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data Peminjam</caption>
         <thead class="thead-dark">
             <tr>
@@ -78,7 +78,7 @@
                 <td>4 Hari</td>
             </tr>
         </tbody>
-    </table>
+    </table></div>
     <p class="material-text">
         Bentuk normalisasi 1NF mengelompokkan beberapa tipe data atau kelompok data yang sejenis agar dapat dipisahkan sehingga anomali data dapat diatasi. Contoh adalah ketika kita ingin melakukan <code>INSERT</code>, <code>UPDATE</code>, atau <code>DELETE</code> pada data <strong>Mobil</strong>, kita tidak akan bersinggungan dengan data <strong>Peminjam</strong> sehingga data <strong>Peminjam</strong> aman meskipun kita memodifikasi data <strong>Mobil</strong>.
     </p>

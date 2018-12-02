@@ -21,7 +21,7 @@
         Contoh normal form:
     </p>
     <a name="tabel"></a>
-    <table class="table table-striped">
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data peminjaman mobil</caption>
         <thead class="thead-dark">
             <tr>
@@ -72,7 +72,7 @@
                 <td>3 Hari</td>
             </tr>
         </tbody>
-    </table>
+    </table></div>
     <p class="material-text">
         Pada bentuk ini ada beberapa ciri ciri yang penting. Yang pertama adalah akan terjadi anomali dalam <code>INSERT</code>, <code>UPDATE</code>, dan <code>DELETE</code>. Hal ini menyebabkan beberapa fungsi DML dalam SQL tidak dapat berjalan dengan baik. Sebagai contoh jika ingin menghapus <strong>Alamat Peminjam</strong>, data <strong>Nama Mobil</strong> akan ikut terhapus. Begitu juga jika ingin menghapus <strong>Tahun Mobil</strong>, <strong>Nama Peminjam</strong> dan <strong>Alamat Peminjam</strong> yang harusnya tidak terhapus akan ikut hilang.
     </p>

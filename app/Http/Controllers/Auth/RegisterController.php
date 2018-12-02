@@ -28,10 +28,6 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected function redirectTo()
-    {
-        return url()->previous();
-    }
     
     protected $redirectTo = '/';
 
