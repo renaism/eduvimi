@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/home', function () {
+    return view('index');
+});
+
 // Route::get('/normalisasi', function () {
 //     return view('normalisasi.normalisasi')->with('page', ['sub' => 'normalisasi']);
 // });
@@ -36,8 +40,5 @@ Route::delete('post/{post}', 'PostController@destroyPost');
 Route::delete('reply/{reply}', 'PostController@destroyReply');
 
 Route::get('search', 'PageController@search');
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile', function() {
-    return view('profile');
-});
+Route::get('/profile', 'PageController@profile');
+Route::get('/settings', 'PageController@settings');

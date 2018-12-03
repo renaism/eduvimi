@@ -9,7 +9,7 @@
                 {{ $post['post']->body }}
             </div>
             <div class="post-footer d-flex mt-2">
-                <div><small>{{ $post['post']->created_at }}</small></div>
+                <div><small>{{ date('j M y - H:i', strtotime($post['post']->created_at)) }}</small></div>
                 @auth
                     <div class="ml-2">
                         <button type="button" class="btn btn-link p-0" data-toggle="collapse" data-target="#postReply{{ $post['post']->id }}">Balas</button>
@@ -71,7 +71,7 @@
                         {{ $reply->body }}
                     </div>
                     <div class="post-footer d-flex mt-2">
-                        <div><small>{{ $reply->created_at }}</small></div>
+                        <div><small>{{ date('j M y - H:i', strtotime($reply->created_at)) }}</small></div>
                         @auth
                             @if(Auth::id() == $reply->user_id)
                             <div class="ml-2">

@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <img src="{{ asset('user.svg') }}" class="rounded-circle" height="300" width="300"/>
-        </div>
-        <div class="col-12 col-md-8">
-
+    @auth
+    <div class="d-flex flex-column flex-md-row align-items-center pt-5">
+        <img src="{{ asset('user.svg') }}" class="rounded-circle" height="250remn" width="250remn"/>
+        <div class="ml-md-5 mt-5 mt-md-0 text-center text-md-left">
+            <h1>{{ Auth::user()->name }}</h1>
+            <h4>{{ Auth::user()->email }}</h4>
+            <p>Bergabung pada {{ date('j F Y', strtotime(Auth::user()->created_at)) }}</p>
+            <a href="/settings" class="btn btn-primary">Edit Profil</a>
         </div>
     </div>
+    @endauth
 @endsection

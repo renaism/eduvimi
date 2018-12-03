@@ -10,6 +10,11 @@ use Illuminate\Support\Collection;
 
 class PageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => ['profile', 'settings']]);
+    }
+
     public function materi($section='main') {
         $page = ['sub' => $section, 'tab' => 'materi'];
         return view('normalisasi.' . $section . '.materi')->with('page', $page);
@@ -46,5 +51,13 @@ class PageController extends Controller
             'search' => $request->input('search')
         ];
         return view('layouts.search')->with('page', $page);
+    }
+
+    public function profile() {
+        return view('profile');
+    }
+
+    public function settings() {
+        return view('settings');
     }
 }

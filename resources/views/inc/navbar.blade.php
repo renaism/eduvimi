@@ -47,8 +47,8 @@
                 <img src="{{ asset('user.svg') }}" class="rounded-circle" height="25" width="25"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="#" class="dropdown-item">{{ Auth::user()->name }}</a>
-                <a href="#" class="dropdown-item">Pengaturan</a>
+                <a href="/profile" class="dropdown-item">{{ Auth::user()->name }}</a>
+                <a href="/settings" class="dropdown-item">Pengaturan</a>
                 <a href="{{ route('logout') }}" class="dropdown-item"
                     onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
