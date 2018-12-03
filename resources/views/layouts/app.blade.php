@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Eduvimi') }}</title>
+    <title>{{ config('app.name', 'Eduvimi') }} | @yield('title')</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -46,6 +46,15 @@
                 font-size: 1.25rem;
             }
         }
+
+        .settings-group .form-control {
+            width: 100%;
+        }
+        @media (min-width: 576px) {
+            .settings-group .form-control {
+                width: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -64,7 +73,7 @@
                 @endisset
             </div>
             <div class="col-12 col-lg-10 p-0 pb-5">
-                <div class="container" id="content">
+                <div class="container px-md-5" id="content">
                     @yield('content')
                 </div>
             </div>

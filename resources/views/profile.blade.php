@@ -1,9 +1,9 @@
 @extends('layouts.app')
-
+@section('title', 'Profil')
 @section('content')
     @auth
     <div class="d-flex flex-column flex-md-row align-items-center pt-5">
-        <img src="{{ asset('user.svg') }}" class="rounded-circle" height="250remn" width="250remn"/>
+        <img src="{{ asset('user.svg') }}" class="rounded-circle" height="250" width="250"/>
         <div class="ml-md-5 mt-5 mt-md-0 text-center text-md-left">
             <h1>{{ Auth::user()->name }}</h1>
             <h4>{{ Auth::user()->email }}</h4>

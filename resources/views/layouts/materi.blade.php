@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    {{ ucfirst($page['tab']) }}
+@endsection
 @section('content')
     @include('inc.tab')
     <span class="d-sm-none">

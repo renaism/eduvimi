@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Cari')
 @section('content')
     <h1>Hasil pencarian untuk "{{ $page['search'] }}"</h1>
     <div class="list-group mt-5" id="searchResults">

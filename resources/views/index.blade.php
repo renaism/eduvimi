@@ -1,9 +1,9 @@
 @extends('layouts.index')
-
+@section('title', 'Beranda')
 @section('content')
     <div class="container-fluid text-center">
         <h1 class="display-1">Eduvimi</h1>
-        <p class="lead">Belajar normalisasi gak pake ribet.</p>
+        <p class="lead">Belajar normalisasi di mana saja!</p>
         
         <div class="row px-5 mt-5">
             <div class="col-md-4 col-sm-12 mb-3">
