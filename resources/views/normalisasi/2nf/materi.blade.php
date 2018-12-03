@@ -3,7 +3,7 @@
 @section('header')Second Normal Form (2NF)@endsection
 @section('material')
     <div class="embed-responsive embed-responsive-16by9 mb-5">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BU1C8RUK4zU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HisXjxkxgl4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="material-text">
         Syarat untuk menerapkan normalisasi bentuk kedua ini adalah data telah dibentuk dalam 1NF. Berikut adalah beberapa fungsi normalisasi 2NF:

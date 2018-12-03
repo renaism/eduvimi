@@ -3,7 +3,7 @@
 @section('header')Third Normal Form (3NF)@endsection
 @section('material')
     <div class="embed-responsive embed-responsive-16by9 mb-5">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BU1C8RUK4zU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uToOyR9l-bY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="material-text">
         Normalisasi 3NF bertujuan untuk menghilangkan seluruh atribut yang tidak berhubungan dengan <em>primary key</em>. Dengan demikian tidak ada ketergantungan transitif pada setiap <em>candidate key</em>. Syarat dari bentuk normal ketiga atau 3NF adalah:

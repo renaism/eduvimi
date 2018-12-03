@@ -2,7 +2,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="/" class="navbar-brand mx-auto">Eduvimi</a>
+    <a href="/" class="navbar-brand mx-auto"><strong>E D U <span style="color: orange">V</span> I M I</strong></a>
     <!-- User -->
     @guest
         <div class="dropdown order-2 order-lg-3 @if (count($errors) > 0) show @endif">
