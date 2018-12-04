@@ -1,12 +1,12 @@
 @extends('layouts.materi')
 
-@section('header')Second Normal Form (2NF)@endsection
+@section('header')2nd Normal Form (2NF)@endsection
 @section('material')
     <div class="embed-responsive embed-responsive-16by9 mb-5">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HisXjxkxgl4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="material-text">
-        Syarat untuk menerapkan normalisasi bentuk kedua ini adalah data telah dibentuk dalam 1NF. Berikut adalah beberapa fungsi normalisasi 2NF:
+        Syarat untuk menerapkan <em>2nd Normal Form</em> (2NF) adalah data telah dibentuk dalam 1NF. Berikut adalah beberapa fungsi normalisasi 2NF:
     </p>
     <ol class="material-text">
         <li>Menghapus beberapa <em>subset</em> data yang ada pada tabel dan menempatkannya pada tabel terpisah.</li>
@@ -85,6 +85,6 @@
         </tbody>
     </table>
     <p class="material-text">
-        Contoh di atas kita menggunakan tabel bantuan yaitu tabel <strong>Penyewaan</strong>. Pada 2NF tidak boleh ada atribut yang berhubungan dengan atribut lainnya secara fungsional. Contohnya <strong>Nama Mobil</strong> bergantung pada <strong>ID Mobil</strong> sehingga dalam bentuk 2NF <strong>Nama Mobil</strong> dapat dihilangkan karena bisa didapatkan pada tabel <strong>Mobil</strong> dengan menggunakan <strong>ID Mobil</strong>.
+        Contoh di atas kita menggunakan tabel bantuan yaitu tabel <strong>Penyewaan</strong>. Pada 2NF tidak boleh ada atribut yang berhubungan dengan atribut lainnya secara fungsional. Contohnya <strong>Nama Mobil</strong> bergantung pada <strong>ID Mobil</strong>. Dalam bentuk 2NF <strong>Nama Mobil</strong> dapat dihilangkan karena bisa didapatkan pada tabel <strong>Mobil</strong> dengan menggunakan <strong>ID Mobil</strong>.
     </p>
 @endsection

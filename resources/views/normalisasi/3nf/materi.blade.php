@@ -1,15 +1,15 @@
 @extends('layouts.materi')
 
-@section('header')Third Normal Form (3NF)@endsection
+@section('header')3rd Normal Form (3NF)@endsection
 @section('material')
     <div class="embed-responsive embed-responsive-16by9 mb-5">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uToOyR9l-bY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="material-text">
-        Normalisasi 3NF bertujuan untuk menghilangkan seluruh atribut yang tidak berhubungan dengan <em>primary key</em>. Dengan demikian tidak ada ketergantungan transitif pada setiap <em>candidate key</em>. Syarat dari bentuk normal ketiga atau 3NF adalah:
+        <em>3rd Normal Form</em> (3NF) bertujuan untuk menghilangkan seluruh atribut yang tidak berhubungan dengan <em>primary key</em>. Dengan demikian tidak ada ketergantungan transitif pada setiap <em>candidate key</em>. Syarat dari 3NF adalah:
     </p>
     <ol class="material-text">
-        <li>Memenuhi semua persyaratan dari bentuk normal kedua.</li>
+        <li>Memenuhi semua persyaratan dari 2NF.</li>
         <li>Menghapus kolom yang tidak bergantung pada <em>primary key</em>.</li>   
     </ol>
     <p class="material-text">

@@ -4,15 +4,15 @@
     <h1 class="display-3">Normalisasi</h1>
     <hr />
     <p class="lesson-text">
-        Normalisasi adalah proses pengelolaan data dalam <em>database</em>. Normalisasi mencakup pembuatan tabel dan membangun hubungan antar tabel berdasarkan aturan perancangan yang baik agar <em>database</em> menjadi lebih fleksibel. Normalisasi dapat melindungi data dari faktor redundansi dan <em>dependency</em> yang tidak konsisten (ketergantungan fungsional). Normalisasi adalah proses formal untuk memutuskan atribut mana saja yang harus dikelompokan bersama dalam satu relasi.
+        Normalisasi adalah proses pengelolaan data dalam <em>database</em>. Normalisasi mencakup pembuatan tabel dan membangun hubungan antar tabel berdasarkan aturan perancangan yang baik agar <em>database</em> menjadi lebih fleksibel. Normalisasi dapat melindungi data dari faktor redundansi dan <em>dependency</em> yang tidak konsisten (ketergantungan fungsional). Normalisasi adalah proses formal untuk memutuskan atribut mana saja yang harus dikelompokkan bersama dalam satu relasi.
     <h1>Tujuan Normalisasi</h1>
     <ol class="lesson-text">
-        <li>Menghilangkan anomali dan membantu menjaga konsistensi data dalam database</li>
-        <li>Menghindari redundansi dengan menyimpan setiap fakta dalam database hanya sekali</li>
+        <li>Menghilangkan anomali dan membantu menjaga konsistensi data dalam <em>database</em></li>
+        <li>Menghindari redundansi dengan menyimpan setiap fakta dalam <em>database</em> hanya sekali</li>
         <li>Memasukkan data ke dalam bentuk yang lebih mampu mengakomodasi perubahan secara akurat</li>
-        <li>Menghindari pembaharuan (update) data yang dapat menyebabkan anomali</li>
-        <li>Memfasilitasi penegakkan batasan-batasan (constraint) data</li>
-        <li>Menghindari coding yang tidak perlu.</li>
+        <li>Menghindari pembaharuan (<em>update</em>) data yang dapat menyebabkan anomali</li>
+        <li>Memfasilitasi penegakkan batasan-batasan (<em>constraint</em>) data</li>
+        <li>Menghindari <em>coding</em> yang tidak perlu.</li>
     </ol>
     <h1>Normal Form</h1>
     <table class="table table-striped">
