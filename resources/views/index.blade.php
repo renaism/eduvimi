@@ -1,13 +1,13 @@
-@extends('layouts.index')
+@extends('layouts.app')
 @section('title', 'Beranda')
 @section('content')
     <div class="container-fluid text-center">
-        <h1 class="display-1">Eduvimi</h1>
-        <p class="lead">Belajar normalisasi di mana saja!</p>
+        <h1 class="brand mb-5"><strong>E D U <span style="color: orange">V</span> I M I</strong></h1>
+        <h3>Belajar normalisasi di mana saja!</h3>
         
         <div class="row px-5 mt-5">
             <div class="col-md-4 col-sm-12 mb-3">
-                <div class="card text-center">
+                <div class="card text-center h-100">
                     <div class="card-body">
                         <span class="oi oi-video display-1 mb-3"></span>
                         <h5 class="card-title">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 mb-3">
-                <div class="card text-center">
+                <div class="card text-center h-100">
                     <div class="card-body">
                         <span class="oi oi-pencil display-1 mb-3"></span>
                         <h5 class="card-title">
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 mb-3">
-                <div class="card text-center">
+                <div class="card text-center h-100">
                     <div class="card-body">
                         <span class="oi oi-chat display-1 mb-3"></span>
                         <h5 class="card-title">

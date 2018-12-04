@@ -21,8 +21,11 @@
         #navbar {
             min-height: 4rem;
         }
-        #navbar .navbar-brand {
+        #navbar .navbar-brand, .brand {
             font-family: 'Quicksand', sans-serif;
+        }
+        .brand {
+            font-size: 2.5rem;
         }
         #sidebar {
             position: sticky;
@@ -51,6 +54,9 @@
         }
 
         @media (min-width: 576px) {
+            .brand {
+                font-size: 5rem;
+            }
             .material-text {
                 font-size: 1.25rem;
             }
@@ -59,12 +65,18 @@
             }
         }
         @media (min-width: 768px) {
+            .brand {
+                font-size: 6.5rem;
+            }
             #content {
                 padding-right: 50px;
                 padding-left: 50px;
             }
         }
         @media (min-width: 1200px) {
+            .brand {
+                font-size: 8.5rem;
+            }
             #content {
                 padding-right: 200px;
                 padding-left: 200px;
@@ -88,7 +100,7 @@
                 @endisset
             </div>
             <div class="col-12 col-lg-10 p-0 pb-5">
-                <div class="container" id="content">
+                <div class="container @empty($page) p-0 @endempty" id="content">
                     @yield('content')
                 </div>
             </div>
