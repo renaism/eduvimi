@@ -45,18 +45,29 @@
         .material-text {
             text-align: justify;
         }
-        @media (min-width: 576px) {
-            .material-text {
-                font-size: 1.25rem;
-            }
-        }
 
         .settings-group .form-control {
             width: 100%;
         }
+
         @media (min-width: 576px) {
+            .material-text {
+                font-size: 1.25rem;
+            }
             .settings-group .form-control {
                 width: auto;
+            }
+        }
+        @media (min-width: 768px) {
+            #content {
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+        }
+        @media (min-width: 1200px) {
+            #content {
+                padding-right: 200px;
+                padding-left: 200px;
             }
         }
     </style>
@@ -77,7 +88,7 @@
                 @endisset
             </div>
             <div class="col-12 col-lg-10 p-0 pb-5">
-                <div class="container px-md-5" id="content">
+                <div class="container" id="content">
                     @yield('content')
                 </div>
             </div>

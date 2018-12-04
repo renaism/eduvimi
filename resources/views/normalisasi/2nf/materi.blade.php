@@ -16,7 +16,7 @@
     <p class="material-text">
         Contoh normalisasi 2NF:
     </p>
-    <table class="table table-striped">
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data Penyewaan (belum 2NF)</caption>
         <thead class="thead-dark">
             <tr>
@@ -52,8 +52,8 @@
                 <td>300,000</td>
             </tr>
         </tbody>
-    </table>
-    <table class="table table-striped">
+    </table></div>
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data Penyewaan (sudah 2NF)</caption>
         <thead class="thead-dark">
             <tr>
@@ -83,7 +83,7 @@
                 <td>300,000</td>
             </tr>
         </tbody>
-    </table>
+    </table></div>
     <p class="material-text">
         Contoh di atas kita menggunakan tabel bantuan yaitu tabel <strong>Penyewaan</strong>. Pada 2NF tidak boleh ada atribut yang berhubungan dengan atribut lainnya secara fungsional. Contohnya <strong>Nama Mobil</strong> bergantung pada <strong>ID Mobil</strong>. Dalam bentuk 2NF <strong>Nama Mobil</strong> dapat dihilangkan karena bisa didapatkan pada tabel <strong>Mobil</strong> dengan menggunakan <strong>ID Mobil</strong>.
     </p>

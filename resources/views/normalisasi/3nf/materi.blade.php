@@ -15,7 +15,7 @@
     <p class="material-text">
         Tidak semua kasus atau tabel dapat kita sesuaikan dengan berbagai bentuk normalisasi ini. Untuk contohnya, kita akan kembali menggunakan tabel <strong>Penyewaan</strong>:
     </p>
-    <table class="table table-striped">
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data Penyewaan (belum 3NF)</caption>
         <thead class="thead-dark">
             <tr>
@@ -45,8 +45,8 @@
                 <td>300,000</td>
             </tr>
         </tbody>
-    </table>
-    <table class="table table-striped">
+    </table></div>
+    <div class="table-responsive"><table class="table table-bordered">
         <caption>Data Penyewaan (sudah 3NF)</caption>
         <thead class="thead-dark">
             <tr>
@@ -73,7 +73,7 @@
                 <td>1</td>
             </tr>
         </tbody>
-    </table>
+    </table></div>
     <p class="material-text">
         Pada tabel pertama, apakah semua kolom sepenuhnya bergantung pada <em>primary key</em>? Ternyata terdapat kolom atribut <strong>Total Harga</strong> yang bergantung pada <strong>Harga</strong> dan <strong>Jumlah</strong>. <strong>Total Harga</strong> dapat dihasilkan dengan mengalikan <strong>Harga</strong> dan <strong>Jumlah</strong>. Bentuk 3NF tabel tersebut didapatkan dengan membuang kolom <strong>Total Harga</strong>.
     </p>
